@@ -1,17 +1,34 @@
 // Assignment code here
 function generatePassword() {
-  var digits =  inputDigits()
-  return digits
+  var settings = {}
+  inputDigits( settings );
+  inputLowercase( settings );
+  inputUppercase( settings );
+  
+
+  console.log( settings )
 }
 
-function inputDigits() {
+function inputDigits(e) {
   let val = Number( prompt("How many characters would you like for your password? Enter a number between 8 - 128") )
   if ( !val || val < 8 || val > 128 ) {
     alert("Please enter a number between 8 - 128")
     return inputDigits();
   }
-  return val
-}
+  e.length = val
+};
+
+function inputLowercase(e) {
+  let val = confirm("Do you want your password to include lower case characters? ")
+  e.lowercase = val
+};
+
+function inputUppercase(e) {
+  let val = confirm("Do you want your password to include upper case characters? ")
+  e.uppercase = val
+};
+
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
