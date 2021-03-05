@@ -1,5 +1,19 @@
 // Assignment code here
+function generatePassword() {
+  var digits =  inputDigits()
 
+  return digits
+}
+
+function inputDigits() {
+  debugger
+  let val = Number( prompt("How many characters would you like for your password? Enter a number between 8 - 128") )
+  if ( !val ) {
+    alert("Please enter a number between 8 - 128")
+    return inputDigits();
+  }
+  return val
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
