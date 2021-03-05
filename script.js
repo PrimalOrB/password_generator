@@ -4,7 +4,8 @@ function generatePassword() {
   inputDigits( settings );
   inputLowercase( settings );
   inputUppercase( settings );
-  
+  inputNumeric( settings );
+  inputSpecial( settings );
 
   console.log( settings )
 }
@@ -27,6 +28,18 @@ function inputUppercase(e) {
   let val = confirm("Do you want your password to include upper case characters? ")
   e.uppercase = val
 };
+
+function inputNumeric(e) {
+  let val = confirm("Do you want your password to include numbers? ")
+  e.numeric = val
+};
+
+
+function inputSpecial(e) {
+  let val = confirm("Do you want your password to include special characters? ")
+  e.special = val
+};
+
 
 
 
