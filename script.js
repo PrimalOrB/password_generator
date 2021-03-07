@@ -2,42 +2,26 @@
 function generatePassword() {
   var settings = {}
   inputDigits( settings );
-  inputLowercase( settings );
-  inputUppercase( settings );
-  inputNumeric( settings );
-  inputSpecial( settings );
-
+  var conditions = ['lowercase', 'uppercase', 'numeric', 'special']
+  inputCondition( settings, conditions)
+ 
   console.log( settings )
 }
 
-function inputDigits(e) {
+function inputDigits(a) {
   let val = Number( prompt("How many characters would you like for your password? Enter a number between 8 - 128") )
   if ( !val || val < 8 || val > 128 ) {
     alert("Please enter a number between 8 - 128")
     return inputDigits();
   }
-  e.length = val
+  a.length = val
 };
 
-function inputLowercase(e) {
-  let val = confirm("Do you want your password to include lower case characters? ")
-  e.lowercase = val
-};
-
-function inputUppercase(e) {
-  let val = confirm("Do you want your password to include upper case characters? ")
-  e.uppercase = val
-};
-
-function inputNumeric(e) {
-  let val = confirm("Do you want your password to include numbers? ")
-  e.numeric = val
-};
-
-
-function inputSpecial(e) {
-  let val = confirm("Do you want your password to include special characters? ")
-  e.special = val
+function inputCondition(a, b) {
+  for( var i = 0; i < b.length; i++ ) {
+    let val = confirm(`Do you want your password to include ${b[i]} characters?`)
+    a[`${b[i]}`] = val
+  }
 };
 
 
