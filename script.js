@@ -25,7 +25,10 @@ function generatePassword() {
     // if the value is true, increment the "sequence" value so that the final entry can be identified to add any remainder values too
     if( selectedConditons[i][1] ) {
       sequence = sequence + 1
-            selectedConditons[i][1] = sequence
+      selectedConditons[i][1] = sequence
+    } else {
+      // if the value is false, push to "validate" array
+      validate.push( selectedConditons[i][1] )
     }
   };
 
