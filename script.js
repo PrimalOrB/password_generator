@@ -66,9 +66,6 @@ shuffle(passwordObj) ;
 return passwordObj.join('')
 };
 
-
-
-
 // function for input of length for the password
 function inputDigits(a) {
   let val = Number( prompt("How many characters would you like for your password? Enter a number between 8 - 128") )
