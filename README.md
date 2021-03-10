@@ -28,3 +28,6 @@ A password generator where the user can select the criteria to include
 ## Built With
 
 - JavaScript
+
+## Website
+https://primalorb.github.io/password_generator/
