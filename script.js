@@ -91,7 +91,7 @@ function handleInput( obj, outObj ) {
     lowercase: 'abcdefghijklmnopqrstuvwxyz',
     uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
     numeric: '1234567890',
-    special: '!@#$%^&*()_+~`|}{[]\:;?><,./-=',
+    special: ` !"#$%&'()*+,-./:;<=>?@[\]^_{|}~`,
   };
   // if the series is the last selection, apply any remainder to the value
   if( obj.series === obj.maxSeries ) {
