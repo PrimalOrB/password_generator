@@ -30,8 +30,5 @@ A password generator where the user can select the criteria to include
 - JavaScript
 
 ## Website
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
 https://primalorb.github.io/password_generator/
